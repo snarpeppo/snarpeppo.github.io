@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Cerca - Documentazione</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">Documentazione</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pagine <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../dettaglio/">Dettaglio (_table)</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Cerca</a>
+</li>
+                            
+<li >
+    <a href="../docimg/">Documenti e immagini</a>
+</li>
+                            
+<li >
+    <a href="../dramma/">Il Dramma</a>
+</li>
+                            
+<li >
+    <a href="../persone/">Persone</a>
+</li>
+                            
+<li >
+    <a href="../spettacoli/">Spettacoli</a>
+</li>
+                            
+<li >
+    <a href="../stagioni/">Stagioni</a>
+</li>
+                            
+<li >
+    <a href="../teatrico/">Teatri e compagnie</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Componenti <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../browse/">browse</a>
+</li>
+                            
+<li >
+    <a href="../cerca/">cerca</a>
+</li>
+                            
+<li >
+    <a href="../detail/">detail</a>
+</li>
+                            
+<li >
+    <a href="../footer/">footer</a>
+</li>
+                            
+<li >
+    <a href="../gallery/">gallery</a>
+</li>
+                            
+<li >
+    <a href="../header/">header</a>
+</li>
+                            
+<li >
+    <a href="../item-view/">item-view</a>
+</li>
+                            
+<li >
+    <a href="../menupanel/">menupanel</a>
+</li>
+                            
+<li >
+    <a href="../pagecontainer/">pagecontainer</a>
+</li>
+                            
+<li >
+    <a href="../preview/">preview</a>
+</li>
+                            
+<li >
+    <a href="../scrolltotop/">scrolltotop</a>
+</li>
+                            
+<li >
+    <a href="../searchpanel/">searchpanel</a>
+</li>
+                            
+<li >
+    <a href="../sticky/">sticky</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sotto componenti <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+  <li class="dropdown-submenu">
+    <a href="#">browse</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../box/">box</a>
+</li>
+            
+<li >
+    <a href="../browsebar/">browsebar</a>
+</li>
+            
+<li >
+    <a href="../browsefilter/">browsefilter</a>
+</li>
+            
+<li >
+    <a href="../list/">list</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">cerca</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../filterbar/">filterbar</a>
+</li>
+            
+<li >
+    <a href="../filterbarbib/">filterbarbiblioteca</a>
+</li>
+            
+<li >
+    <a href="../result/">result</a>
+</li>
+            
+<li >
+    <a href="../searchbar/">searchbar</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">detail</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">metadati</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../metadati/">metadati</a>
+</li>
+            
+<li >
+    <a href="../metadataService/">metadataService</a>
+</li>
+            
+<li >
+    <a href="../metadatilist/">metadatilist</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../related/">related</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">spettacoli-view</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../spettacoliview/">spettacoli-view</a>
+</li>
+            
+<li >
+    <a href="../locandina/">locandina</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">item-view</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../cardview/">card-view</a>
+</li>
+            
+<li >
+    <a href="../listview/">list-view</a>
+</li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../dettaglio/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../docimg/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#cerca">Cerca</a></li>
+            <li><a href="#descrizione-generale">Descrizione generale</a></li>
+            <li><a href="#comportamenti-specifici">Comportamenti specifici</a></li>
+            <li><a href="#i-filtri">I Filtri:</a></li>
+            <li><a href="#il-metodo-nextpage">Il metodo nextPage():</a></li>
+        <li class="main "><a href="#il-metodo-prevpage">Il metodo prevPage():</a></li>
+        <li class="main "><a href="#il-metodo-switchtab">Il metodo switchTab():</a></li>
+        <li class="main "><a href="#1-per-la-sezione-archivio-filtri">1) Per la sezione Archivio (filtri):</a></li>
+            <li><a href="#il-metodo-setfiltro">Il metodo setFiltro():</a></li>
+        <li class="main "><a href="#il-metodo-removefiltro">Il metodo removeFiltro():</a></li>
+        <li class="main "><a href="#il-metodo-removeallfilters">Il metodo removeAllFilters():</a></li>
+        <li class="main "><a href="#il-metodo-setdatafiltri">Il metodo setDataFiltri():</a></li>
+        <li class="main "><a href="#2-per-la-sezione-biblioteca-filtri">2) Per la sezione Biblioteca (filtri):</a></li>
+            <li><a href="#il-metodo-setadvsearch">Il metodo setAdvSearch():</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="cerca">Cerca</h1>
+<hr>
+
+<h2 id="descrizione-generale">Descrizione generale</h2>
+<p>La pagina “<strong>cerca</strong>” è la pagina in cui vengono visualizzati gli elementi della ricerca effettuata.<br />
+Permette di ricercare manualmente degli elementi, attraverso una barra di ricerca e, attraverso l’utilizzo di filtri, di scremare ulteriormente la ricerca, sia dalla parte dell’<em>Archivio</em>, sia da quella della <em>Biblioteca</em> (2 tipologie di filtri differenti).<br />
+È possibile, inoltre, visualizzare i risultati della ricerca secondo diversi tipi d’ordine: “<strong>A-Z</strong>”, “<strong>Z-A</strong>”, “<strong>Più recente</strong>” e “<strong>Meno recente</strong>” e se visualizzarli in formato <em>griglia</em> o <em>elenco</em>.<br />
+Permette anche di passare alla schermata, precedente o successiva a quella in cui ci si trova, per poter visualizzare gli altri elementi risultati dalla ricerca.<br />
+La selezione di un elemento permette il reindirizzamento alla pagina dell’elemento stesso.  </p>
+<h2 id="comportamenti-specifici">Comportamenti specifici</h2>
+<p>La pagina è composta dall’unione di diversi componenti: <a href="../pagecontainer/">pagecontainer</a>, <a href="../filterbar/">filterbar</a>, <a href="../filterbarbib/">filterbarBiblioteca</a>, <a href="../searchbar/">searchbar</a> e <a href="../result/">result</a>.  </p>
+<ul>
+<li><a href="../pagecontainer/">pagecontainer</a> → contenitore per l’insieme dei risultati dell’<em>archivio</em> e della <em>biblioteca</em>.</li>
+<li><a href="../filterbar/">filterbar</a> → filtri dell’<em>archivio</em>.</li>
+<li><a href="../filterbarbib/">filterbarBiblioteca</a> → filtri della <em>biblioteca</em>.</li>
+<li><a href="../searchbar/">searchbar</a> → barra di ricerca, con filtri “<em>A-Z</em>”, “<em>Z-A</em>”, “<em>Più recenti</em>” e “<em>Meno recenti</em>”.</li>
+<li><a href="../result/">result</a> → gli elementi risultanti dalla ricerca, le icone di passaggio alle pagine (precedenti e successive) e le icone per mostrare gli elementi risultati secondo una griglia o un elenco.  </li>
+</ul>
+<pre><code class="java">import AuiPageContainer from '~/components/pagecontainer/pagecontainer.vue'
+import AuiFilterbar from '~/components/cerca/filterbar/filterbar.vue'
+import AuiFilterbarBiblioteca from '~/components/cerca/filterbarBiblioteca/filterbarBiblioteca.vue'
+import AuiSearchbar from '~/components/cerca/searchbar/searchbar.vue'
+import AuiResult from '~/components/cerca/result/result.vue'
+</code></pre>
+
+<h2 id="_1"></h2>
+<p>Quando degli elementi nella <em>query</em> cambiano (cambio dell’URL del sito: es.https://front.teatrostabile.promemoriagroup.com/cerca?tags=amleto&amp;sort=az&amp;page=0 ...), lo <code>store.dispatch</code> effettua tre chiamate alla <em>query</em>:  </p>
+<ul>
+<li>
+<p><code>cerca/getFiltri</code>;</p>
+</li>
+<li>
+<p><code>cerca/getData</code></p>
+</li>
+<li>
+<p><code>cerca/getCountAltro</code></p>
+</li>
+</ul>
+<pre><code class="java">let [filtri, data, countAltro] = await Promise.all
+</code></pre>
+
+<p>Queste tre chiamate riconducono a tre diverse azioni presenti nello <em>store</em> e cambieranno gli elementi all’interno della <em>query</em>.<br />
+La riuscita di queste tre diverse azioni, che vengono eseguite in parallelo, darà come output i risultati per la ricerca effettuata.  </p>
+<h2 id="_2"></h2>
+<pre><code class="java">watchQuery: ['filtro', 'data', 'tags', 'sort', 'page', 'tab', 'titolo', 'soggetto'], 
+async asyncData({store, query})
+</code></pre>
+
+<ul>
+<li><code>‘filtro’</code> → filtri in generale della sezione Archivio.</li>
+<li><code>‘data’</code> → filtro data della sezione Archivio.</li>
+<li><code>‘tags’</code> → parole ricercate nella barra di ricerca.</li>
+<li><code>‘sort’</code> → tipo di ordinamento: “<strong>Rilevanza</strong>”, “<strong>A-Z</strong>”, “<strong>Z-A</strong>”, “<strong>Più recente</strong>” e “<strong>Meno recente</strong>”.</li>
+<li><code>‘page’</code> → impaginazione dei risultati ( ‘<strong>&lt;</strong>’  o  ‘<strong>&gt;</strong>’    es. page 1, page 2…).</li>
+<li><code>‘tab’</code> → sezione Archivio o Biblioteca.</li>
+<li><code>‘titolo’</code> → filtro della sezione Biblioteca.</li>
+<li><code>‘soggetto’</code> → altro filtro della sezione Biblioteca.</li>
+</ul>
+<h2 id="_3"></h2>
+<p>La prima azione richiama il metodo <code>getFiltri()</code> nel <em>cerca.js</em> contenuto nello <em>store</em>.<br />
+Corrisponde alla chiamata/selezione dei filtri di <em>Archivio</em> e <em>Biblioteca</em>.  </p>
+<pre><code class="java">store.dispatch('cerca/getFiltri', {
+    queryTags,
+    filtriSelezionati,
+    filtriDataSelezionati,
+    titolo,
+    soggetto,
+    tab
+}),
+</code></pre>
+
+<p><center><img alt="cerca cerca/getFiltri img" src="../imgpages/cerca/cerca_filtriab.png" /></center></p>
+<h2 id="_4"></h2>
+<p>La seconda azione richiama il metodo <code>getData()</code> nel <em>cerca.js</em> contenuto nello <em>store</em>.<br />
+Corrisponde alla chiamata dei risultati della ricerca.  </p>
+<pre><code class="java">store.dispatch('cercs/getData', {
+    queryTags,
+    filtriSelezionati,
+    skip,
+    limit,
+    'sort': orderByComputed.currentSort.query,
+    titolo,
+    soggetto,
+    tab,
+    showInitialResult
+}),
+</code></pre>
+
+<p><center><img alt="cerca elementi img" src="../imgpages/cerca/cerca_elementi.png" /></center></p>
+<h2 id="_5"></h2>
+<p>La terza azione richiama il metodo <code>getCountAltro()</code> nel <em>cerca.js</em> contenuto nello <em>store</em>.<br />
+Corrisponde alla chiamata del numero di risultati ottenuti o in <em>Archivio</em> o in <em>Biblioteca</em>.  </p>
+<pre><code class="java">store.dispatch('cerca/getCountAltro', {
+    queryTags,
+    tab: tab === tabArchivio ? tabBiblioteca : tabArchivio
+})
+</code></pre>
+
+<p><center><img alt="cerca filtri archivio" src="../imgpages/cerca/cerca_filtria.png" /></center>
+<center><img alt="cerca filtri biblioteca" src="../imgpages/cerca/cerca_filtrib.png" /></center></p>
+<h2 id="_6"></h2>
+<h2 id="i-filtri">I Filtri:</h2>
+<p>Il vettore <code>sortOptions</code> mostra i diversi tipi di ordinamento per gli elementi: “<em>A-Z</em>”, “<em>Z-A</em>”, “<em>Più recenti</em>” e “<em>Meno recenti</em>”. Questi tipi sono gestiti dal metodo <code>updateSort()</code>.  </p>
+<pre><code class="java">updateSort (option){
+    if (option &amp;&amp; this.orderBy.currentSort.value !== option.value){
+        this.orderBy.currentSort = option
+        this.aggiornaQuery()
+    }
+},
+</code></pre>
+
+<p><center><img alt="cerca filtro sort" src="../imgpages/cerca/cerca_filtriaz.png" /></center></p>
+<h2 id="_7"></h2>
+<h3 id="il-metodo-nextpage">Il metodo <code>nextPage()</code>:</h3>
+<p>permette di mostrare la pagina successiva, a quella in cui ci si trova, contenente i restanti risultati della ricerca effettuata (es. page 1 → page 2).  </p>
+<pre><code class="java">nextPage (){
+    this.skip = this.skip + 1
+    this.aggiornaQuery(true)
+},
+</code></pre>
+
+<p>Click sulla freccia: <center><img alt="cerca &gt; img" src="../imgpages/cerca/cerca_frecciadx.png" /></center></p>
+<h2 id="_8"></h2>
+<h3 id="il-metodo-prevpage">Il metodo <code>prevPage()</code>:</h3>
+<p>permette di mostrare la pagina precedente, a quella in cui ci si trova, contenente i restanti risultati della ricerca effettuata (es. page 2 → page 1).  </p>
+<pre><code class="java">prevPage (){
+    thi.skip = this.skip - 1
+    this.aggiornaQuery(true)
+},
+</code></pre>
+
+<p>Click sulla freccia: <center><img alt="cerca &lt; img" src="../imgpages/cerca/cerca_frecciasx.png" /></center></p>
+<h2 id="_9"></h2>
+<h3 id="il-metodo-switchtab">Il metodo <code>switchTab()</code>:</h3>
+<p>permette di passare dalla sezione <em>Archivio</em> a quella <em>Biblioteca</em> e viceversa, cancellando i filtri che si erano selezionati.  </p>
+<pre><code class="java">switchTab (){
+    this.filtriSelezionati = []
+    this.filtriDataSelezionati = {
+        from: '',
+        to: ''
+    }
+}
+</code></pre>
+
+<h2 id="_10"></h2>
+<h2 id="1-per-la-sezione-archivio-filtri">1) Per la sezione Archivio (filtri):</h2>
+<h3 id="il-metodo-setfiltro">Il metodo <code>setFiltro()</code>:</h3>
+<p>aggiunge il filtro selezionato all’insieme di filtri già in uso per la ricerca che si sta effettuando e aggiorna la ricerca.  </p>
+<pre><code class="java">setFiltro (){
+    this.filtriSelezionati.push(filtro)
+    this.aggiornaQuery()
+},
+</code></pre>
+
+<h2 id="_11"></h2>
+<h3 id="il-metodo-removefiltro">Il metodo <code>removeFiltro()</code>:</h3>
+<p>rimuove il filtro selezionato, attraverso un indice che corrisponde all’id del filtro, dall’insieme di filtri già in uso per la ricerca che si sta effettuando e aggiorna la ricerca.  </p>
+<pre><code class="java">removeFiltro (){
+    var index = _.findIndex(this.filtriSelezionati, item =&gt; item.id === filtro.id)
+    this.filtriSelezionati.splice(index, 1)
+    this.aggiornaQuery()
+},
+</code></pre>
+
+<h2 id="_12"></h2>
+<h3 id="il-metodo-removeallfilters">Il metodo <code>removeAllFilters()</code>:</h3>
+<p>se vi è più di un filtro selezionato, cliccando su “<strong>RIMUOVI TUTTI</strong>”, vengono rimossi tutti i filtri e mostrati di nuovo tutti gli elementi contenuti nell’archivio.  </p>
+<pre><code class="java">removeAllFilters (){
+    this.filtriSelezionati = []
+    this.aggiornaQuery()
+},
+</code></pre>
+
+<p><img alt="cerca rimuovi tutto button" src="../imgpages/cerca/cerca_rimuovi.png" /></center></p>
+<h2 id="_13"></h2>
+<h3 id="il-metodo-setdatafiltri">Il metodo <code>setDataFiltri()</code>:</h3>
+<p>permette la selezione di un range di tempo (<em>from → to</em>) che selezionerà solo gli elementi compresi in quelle date.  </p>
+<pre><code class="java">setDataFiltri (filtriDataSelezionati){
+    this.filtriDataSelezionati = {
+        from: filtriDataSelezionati.from ? filtriDataSelezionati.from.getTime() : '',
+        to: filtriDataSelezionati.to ? filtriDataSelezionati.to.getTime : ''
+    }
+    this.aggiornaQuery()
+},
+</code></pre>
+
+<p><center><img alt="cerca filtro data range" src="../imgpages/cerca/cerca_filtrodata.png" /></center></p>
+<h2 id="_14"></h2>
+<h2 id="2-per-la-sezione-biblioteca-filtri">2) Per la sezione Biblioteca (filtri):</h2>
+<h3 id="il-metodo-setadvsearch">Il metodo <code>setAdvSearch()</code>:</h3>
+<p>permette di aggiungere ai filtri solo un autore e un genere, selezionabili tramite un menù, mentre filtra, svolgendo una ricerca, per titolo e soggetto che vengono inseriti manualmente dall’utente.  </p>
+<pre><code class="java">setAdvSearch (params){
+    this.filtriSelezionati = []
+    if (params.autore) {
+        this.filtriSelezionati.push(params.autore)
+    }
+    if (params.genere){
+        this.filtriSelezionati.push(params.genere)
+    }
+    this.titolo = params.titolo
+    this.soggetto = params.soggetto
+    this.aggiornaQuery()
+},
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script src="../js/base.js"></script>
+        <script src="../search/require.js"></script>
+        <script src="../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>

@@ -3,7 +3,7 @@
 <hr>  
 
 ## Descrizione generale  
-Il componente “**footer**” è un piè di pagina comune a tutte facciate.  
+Il componente “*footer*” è un piè di pagina comune a tutte facciate.  
 Esso mostra il logo del sito e dà informazioni generali, sui contatti, sul servizio al pubblico e sui social ad esso associati; quest’ultima categoria presenta dei link per ciascun social: Facebook, Twitter, YouTube e Instagram, che riconducono alla pagina social del sito.  
 
 ## Comportamenti specifici  

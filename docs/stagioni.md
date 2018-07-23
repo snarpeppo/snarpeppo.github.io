@@ -27,6 +27,37 @@ async asyncData ({store, query}) {
 	}
 },
 ```
+
+-Richiama la *query* dallo *store*:
+```java
+export const actions = {
+	async getData (store) {
+		let collection = 'ca_occurrences'
+		let filter = '192'
+		let total = 0
+		let response = await this.$axios.$post('aggregate', {
+			'table': 'data_it',
+			'query': [{
+				'$match': {
+					'table': collection,
+					'access': 1,
+					'type_id.id': filter
+				}
+			},
+			{
+				'$project': {
+					id: '$id',
+					label: '$preferred_label',
+					table: '$table',
+					filtri: '$filtri'
+				}
+			}]
+		})
+	}
+
+}
+```
+
 ##
 
 Imposta come titolo della pagina “*Stagioni*”.  

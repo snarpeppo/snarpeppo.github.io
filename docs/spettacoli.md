@@ -26,6 +26,21 @@ async asyncData ({store, query}) {
 	}
 },
 ```
+
+-Richiama la *query* dallo *store*:
+```java
+export const actions = {
+	async getData (store){
+		let total = 0
+		let query = {
+			'table': collection,
+			'access': 1,
+			'type_id.id': {$in: [include]}
+		}
+	}
+}
+```
+
 ##
 
 Imposta come titolo della pagina “*Spettacoli*”.  

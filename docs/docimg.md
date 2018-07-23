@@ -32,6 +32,33 @@ async asyncData({store, query}) {
   }
 },
 ```
+
+-Richiama la *query* dallo *store*:
+```java
+export const actions = {
+  async getFiltri (store) {
+    let response = await this.$axios.$post('aggregate', {
+      'table': 'data_it',
+      'query':[{
+        '$match': {
+          'table': collection,
+          'access': 1,
+          'type_id.id':{ $nin: exclude }
+        }
+      }, ...pipeline,
+      {
+        '$group': {
+          '_id': '$' + groupBy,
+          'count': {
+            $addToSet: '$id'
+          }
+        }
+      }]
+    })
+  }
+}
+```
+
 ##
 
 Imposta come titolo della pagina “*Documenti e immagini*”.  

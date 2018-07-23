@@ -26,6 +26,35 @@ async asyncData ({store, query}) {
 	}
 },
 ```
+
+-Richiama la *query* dallo *store*:
+```java
+export const actions = {
+	async getData (store) {
+		var collection = 'ca_entities'
+		var exclude = '83'
+		let total = 0
+		let query = {
+			'table': collection,
+			'access': 1,
+			'type_id.id': {$nin: [exclude]}
+		}
+		let response = await this.$axios.$post('aggregate', {
+			'table': 'data_it',
+			'query': [{
+				'$match': query
+			},
+			{
+				'$project': {
+					id: '$id',
+					label: '$preferred_label',
+					table: '$table'
+				}
+			}
+	}
+}
+```
+
 ##
 
 Imposta come titolo della pagina “*Teatri e compagnie*”.  

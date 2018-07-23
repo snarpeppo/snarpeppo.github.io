@@ -26,6 +26,40 @@ async asyncData ({store, query}) {
 	}
 },
 ```
+
+-Richiama la *query* dallo *store*:
+```java
+export const actions = {
+	async getData (store){
+		var collection = 'ca_objects'
+		let total = 0
+		let query = {
+			'table': collection,
+			'access': 1,
+			'metadati.tipo_biblio.value': 'fascicolo',
+			'parent_path': {$regex: '^58363/4695'}
+		}
+
+		let response = await this.$axios.$post('aggregate', {
+			'table': 'data_it',
+			'query': [{
+				'$match': query
+			},
+			{
+				'$project': {
+					id: '$id',
+					label: '$preferred_label',
+					table: '$table',
+					filtri: '$filtri',
+					primaryImg: '$primaryImg',
+					type_id: '$type_id'
+				}
+			}]
+		})
+	}
+}
+```
+
 ##
 
 Imposta come titolo della pagina “*Il Dramma*”.  

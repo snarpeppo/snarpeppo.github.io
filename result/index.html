@@ -285,7 +285,7 @@
 <hr>
 
 <h2 id="_1"></h2>
-<p>È la pagina che mostra tutti gli elementi risultati dalla ricerca, attraverso la barra di ricerca e i filtri.  </p>
+<p>Il componente "<strong>result</strong>" è la pagina che mostra tutti gli elementi risultati dalla ricerca, attraverso la barra di ricerca e i filtri.  </p>
 <h2 id="_2"></h2>
 <ul>
 <li>Richiama i componenti: <a href="../sticky/">sticky</a>, <a href="../cardview/">card-view</a> e <a href="../listview/">list-view</a>.  </li>
@@ -298,7 +298,7 @@ import AuiListView from '~/components/item-view/list-view/list.vue'
 <h2 id="_3"></h2>
 <h3 id="il-metodo-next">Il metodo <code>next()</code>:</h3>
 <p>richiama una funzione che controlla se il numero di <code>skip</code> (<em>passaggi alla pagina successiva</em>) moltiplicato per il numero di elementi per pagina (<em>sempre fisso a 30</em>) è minore degli elementi totali.<br />
-  Se lo è, permette il passaggio alla pagina successiva, altrimenti, disabilita il bottone “<em>&gt;</em>”.  </p>
+  Se lo è, permette il passaggio alla pagina successiva, altrimenti, disabilita il bottone “<strong>&gt;</strong>”.  </p>
 <pre><code class="java">'next': function () {
     if((this.skip + 1) * this.limit &lt; this.count) {
         this.$emit('next')
@@ -308,7 +308,7 @@ import AuiListView from '~/components/item-view/list-view/list.vue'
 
 <h2 id="_4"></h2>
 <h3 id="il-metodo-prev">Il metodo <code>prev()</code>:</h3>
-<p>richiama una funzione che controlla se il numero di <code>skip</code> (<em>passaggi alla pagina successiva</em>) è maggiore di zero. Se lo è, vuol dire che si è su una pagina successiva alla prima e, quindi, è possibile tornare indietro; altrimenti viene disabilitato il bottone “<em>&lt;</em>”.  </p>
+<p>richiama una funzione che controlla se il numero di <code>skip</code> (<em>passaggi alla pagina successiva</em>) è maggiore di zero. Se lo è, vuol dire che si è su una pagina successiva alla prima e, quindi, è possibile tornare indietro; altrimenti viene disabilitato il bottone “<strong>&lt;</strong>”.  </p>
 <pre><code class="java">'prev': function () {
     if (this.skip &gt; 0) {
         this.$emit('prev')

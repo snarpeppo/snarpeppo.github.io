@@ -285,7 +285,7 @@
 <hr>
 
 <h2 id="descrizione-generale">Descrizione generale</h2>
-<p>La pagina “stagioni”, contenente tutti gli elementi sotto forma di <em>elenco</em>, ordinati per stagione, appartenenti a quella categoria.  </p>
+<p>La pagina “<strong>stagioni</strong>”, contenente tutti gli elementi sotto forma di <em>elenco</em>, ordinati per stagione, appartenenti a quella categoria.  </p>
 <h2 id="comportamenti-specifici">Comportamenti specifici</h2>
 <p>La pagina è composta e richiama il componente: <a href="../browse/">browse</a>.  </p>
 <pre><code class="java">import AuiBrowse from '~/components/browse/browse.vue'
@@ -302,6 +302,35 @@ Assegnerà alle proprietà <code>total</code> e <code>result</code> i rispettivi
         result:data.result
     }
 },
+</code></pre>
+
+<p>-Richiama la <em>query</em> dallo <em>store</em>:</p>
+<pre><code class="java">export const actions = {
+    async getData (store) {
+        let collection = 'ca_occurrences'
+        let filter = '192'
+        let total = 0
+        let response = await this.$axios.$post('aggregate', {
+            'table': 'data_it',
+            'query': [{
+                '$match': {
+                    'table': collection,
+                    'access': 1,
+                    'type_id.id': filter
+                }
+            },
+            {
+                '$project': {
+                    id: '$id',
+                    label: '$preferred_label',
+                    table: '$table',
+                    filtri: '$filtri'
+                }
+            }]
+        })
+    }
+
+}
 </code></pre>
 
 <h2 id="_2"></h2>

@@ -285,7 +285,7 @@
 <hr>
 
 <h2 id="descrizione-generale">Descrizione generale</h2>
-<p>La pagina “spettacoli”, contenente tutti gli elementi sotto forma di <em>elenco</em>, ordinati per stagione, appartenenti a quella categoria.  </p>
+<p>La pagina “<strong>spettacoli</strong>”, contenente tutti gli elementi sotto forma di <em>elenco</em>, ordinati per stagione, appartenenti a quella categoria.  </p>
 <h2 id="comportamenti-specifici">Comportamenti specifici</h2>
 <p>La pagina è composta e richiama il componente: <a href="../browse/">browse</a>.  </p>
 <pre><code class="java">import AuiBrowse from '~/components/browse/browse.vue'
@@ -302,6 +302,19 @@ Assegnerà alle proprietà <code>total</code> e <code>result</code> i rispettivi
         result: data.result
     }
 },
+</code></pre>
+
+<p>-Richiama la <em>query</em> dallo <em>store</em>:</p>
+<pre><code class="java">export const actions = {
+    async getData (store){
+        let total = 0
+        let query = {
+            'table': collection,
+            'access': 1,
+            'type_id.id': {$in: [include]}
+        }
+    }
+}
 </code></pre>
 
 <h2 id="_2"></h2>

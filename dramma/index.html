@@ -285,7 +285,7 @@
 <hr>
 
 <h2 id="descrizione-generale">Descrizione generale</h2>
-<p>La pagina “il-dramma”, contenente tutti gli elementi sotto forma di “<em>card</em>”, con preview e ordinati per <em>data</em>, appartenenti a quella categoria.  </p>
+<p>La pagina “<strong>il-dramma</strong>”, contenente tutti gli elementi sotto forma di “<em>card</em>”, con preview e ordinati per <em>data</em>, appartenenti a quella categoria.  </p>
 <h2 id="comportamenti-specifici">Comportamenti specifici</h2>
 <p>La pagina è composta e richiama il componente: <a href="../browse/">browse</a>.  </p>
 <pre><code class="java">import AuiBrowse from '~/components/browse/browse.vue'
@@ -302,6 +302,38 @@ Assegnerà alle proprietà <code>total</code> e <code>result</code> i rispettivi
         result: data.result
     }
 },
+</code></pre>
+
+<p>-Richiama la <em>query</em> dallo <em>store</em>:</p>
+<pre><code class="java">export const actions = {
+    async getData (store){
+        var collection = 'ca_objects'
+        let total = 0
+        let query = {
+            'table': collection,
+            'access': 1,
+            'metadati.tipo_biblio.value': 'fascicolo',
+            'parent_path': {$regex: '^58363/4695'}
+        }
+
+        let response = await this.$axios.$post('aggregate', {
+            'table': 'data_it',
+            'query': [{
+                '$match': query
+            },
+            {
+                '$project': {
+                    id: '$id',
+                    label: '$preferred_label',
+                    table: '$table',
+                    filtri: '$filtri',
+                    primaryImg: '$primaryImg',
+                    type_id: '$type_id'
+                }
+            }]
+        })
+    }
+}
 </code></pre>
 
 <h2 id="_2"></h2>

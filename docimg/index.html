@@ -285,7 +285,7 @@
 <hr>
 
 <h2 id="descrizione-generale">Descrizione generale</h2>
-<p>La pagina “documenti-e-immagini”, contenente tutti gli elementi sotto forma di “<em>card</em>”, con preview e ordinati per stagione, appartenenti a quella categoria.<br />
+<p>La pagina “<strong>documenti-e-immagini</strong>”, contenente tutti gli elementi sotto forma di “<em>card</em>”, con preview e ordinati per stagione, appartenenti a quella categoria.<br />
 È possibile filtrarli secondo: <strong>Fotografia</strong>, <strong>Rassegna stampa</strong>, <strong>Manifesti e locandine</strong>, <strong>Programma</strong>, <strong>Schede di sala</strong>, <strong>Copione</strong>, <strong>Comunicato stampa</strong> e <strong>Serie</strong>.  </p>
 <h2 id="comportamenti-specifici">Comportamenti specifici</h2>
 <p>La pagina è composta e richiama il componente: <a href="../browse/">browse</a>.  </p>
@@ -308,6 +308,31 @@ async asyncData({store, query}) {
     filters: filters
   }
 },
+</code></pre>
+
+<p>-Richiama la <em>query</em> dallo <em>store</em>:</p>
+<pre><code class="java">export const actions = {
+  async getFiltri (store) {
+    let response = await this.$axios.$post('aggregate', {
+      'table': 'data_it',
+      'query':[{
+        '$match': {
+          'table': collection,
+          'access': 1,
+          'type_id.id':{ $nin: exclude }
+        }
+      }, ...pipeline,
+      {
+        '$group': {
+          '_id': '$' + groupBy,
+          'count': {
+            $addToSet: '$id'
+          }
+        }
+      }]
+    })
+  }
+}
 </code></pre>
 
 <h2 id="_2"></h2>

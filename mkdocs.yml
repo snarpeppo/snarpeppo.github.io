@@ -1,0 +1,50 @@
+site_name: Documentazione
+pages:
+- Home: 'index.md'
+- Pagine:
+    - 'Dettaglio (_table)': 'dettaglio.md'
+    - 'Cerca': 'cercapg.md'
+    - 'Documenti e immagini': 'docimg.md'
+    - 'Il Dramma': 'dramma.md'
+    - 'Persone': 'persone.md'
+    - 'Spettacoli': 'spettacoli.md'
+    - 'Stagioni': 'stagioni.md'
+    - 'Teatri e compagnie': 'teatrico.md'
+- Componenti:
+    - 'browse': 'browse.md'
+    - 'cerca': 'cerca.md'
+    - 'detail': 'detail.md'
+    - 'footer': 'footer.md'
+    - 'gallery': 'gallery.md'
+    - 'header': 'header.md'
+    - 'item-view': 'item-view.md'
+    - 'menupanel': 'menupanel.md'
+    - 'pagecontainer': 'pagecontainer.md'
+    - 'preview': 'preview.md'
+    - 'scrolltotop': 'scrolltotop.md'
+    - 'searchpanel': 'searchpanel.md'
+    - 'sticky': 'sticky.md'
+- Sotto componenti:
+    - 'browse':
+        - 'box': 'box.md'
+        - 'browsebar': 'browsebar.md'
+        - 'browsefilter': 'browsefilter.md'
+        - 'list': 'list.md'
+    - 'cerca':
+        - 'filterbar': 'filterbar.md'
+        - 'filterbarbiblioteca': 'filterbarbib.md'
+        - 'result': 'result.md'
+        - 'searchbar': 'searchbar.md'
+    - 'detail':
+        - 'metadati':
+             - 'metadati': 'metadati.md'
+             - 'metadataService': 'metadataService.md'
+             - 'metadatilist': 'metadatilist.md'
+        - 'related': 'related.md'
+        - 'spettacoli-view':
+             - 'spettacoli-view': 'spettacoliview.md'
+             - 'locandina': 'locandina.md'
+    - 'item-view':
+        - 'card-view': 'cardview.md'
+        - 'list-view': 'listview.md'
+extra_css: [extra.css]
